@@ -1,0 +1,256 @@
+{
+  "dms-z1-log-v1-2019-09" : {
+    "mappings" : {
+      "journal" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "action" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "cartridge_id" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "context" : {
+            "type" : "keyword"
+          },
+          "device" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "ingest_station" : {
+            "type" : "keyword"
+          },
+          "log_level" : {
+            "type" : "keyword"
+          },
+          "message" : {
+            "type" : "text"
+          },
+          "mount" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "reader_id" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "reader_port" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "tags" : {
+            "type" : "text"
+          },
+          "updated_at" : {
+            "type" : "date"
+          }
+        }
+      },
+      "_default_" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true
+      }
+    }
+  }
+}

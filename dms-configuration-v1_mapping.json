@@ -1,0 +1,598 @@
+{
+  "dms-configuration-v1" : {
+    "mappings" : {
+      "cartridge" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "cartridge_id" : {
+            "type" : "keyword"
+          },
+          "device" : {
+            "type" : "keyword"
+          },
+          "ingest_state" : {
+            "type" : "keyword"
+          },
+          "ingest_station" : {
+            "type" : "keyword"
+          },
+          "slot" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          },
+          "usage" : {
+            "type" : "double"
+          },
+          "workflow_type" : {
+            "type" : "keyword"
+          }
+        }
+      },
+      "usb_reader" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "device" : {
+            "type" : "keyword"
+          },
+          "hostname" : {
+            "type" : "keyword"
+          },
+          "ingest_state" : {
+            "type" : "keyword"
+          },
+          "mount" : {
+            "type" : "keyword"
+          },
+          "mount_state" : {
+            "type" : "keyword"
+          },
+          "port" : {
+            "type" : "keyword"
+          },
+          "reader_id" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          }
+        }
+      },
+      "reader" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "device" : {
+            "type" : "keyword"
+          },
+          "hostname" : {
+            "type" : "keyword"
+          },
+          "ingest_state" : {
+            "type" : "keyword"
+          },
+          "message" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "mount" : {
+            "type" : "keyword"
+          },
+          "port" : {
+            "type" : "keyword"
+          },
+          "reader_id" : {
+            "type" : "keyword"
+          },
+          "status" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          }
+        }
+      },
+      "cluster" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "available" : {
+            "type" : "boolean"
+          },
+          "cluster_id" : {
+            "type" : "keyword"
+          },
+          "nfs_host" : {
+            "type" : "keyword"
+          },
+          "output_export" : {
+            "type" : "keyword"
+          },
+          "output_mount" : {
+            "type" : "keyword"
+          },
+          "output_share" : {
+            "type" : "keyword"
+          },
+          "perm_export" : {
+            "type" : "keyword"
+          },
+          "perm_mount" : {
+            "type" : "keyword"
+          },
+          "perm_share" : {
+            "type" : "keyword"
+          },
+          "raw_export" : {
+            "type" : "keyword"
+          },
+          "raw_mount" : {
+            "type" : "keyword"
+          },
+          "raw_share" : {
+            "type" : "keyword"
+          },
+          "resim_export" : {
+            "type" : "keyword"
+          },
+          "resim_mount" : {
+            "type" : "keyword"
+          },
+          "resim_share" : {
+            "type" : "keyword"
+          },
+          "smb_host" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          },
+          "useroutput_export" : {
+            "type" : "keyword"
+          },
+          "useroutput_mount" : {
+            "type" : "keyword"
+          },
+          "useroutput_share" : {
+            "type" : "keyword"
+          },
+          "weight" : {
+            "type" : "float"
+          }
+        }
+      },
+      "_default_" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true
+      }
+    }
+  }
+}

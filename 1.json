@@ -1,0 +1,867 @@
+{
+  "dms-z1-resim-v1-2019-09" : {
+    "aliases" : { },
+    "mappings" : {
+      "sensorversion" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "created_at" : {
+            "type" : "date"
+          },
+          "drive_id" : {
+            "type" : "keyword"
+          },
+          "ended_at" : {
+            "type" : "date"
+          },
+          "output_path" : {
+            "type" : "keyword"
+          },
+          "perm_path" : {
+            "type" : "keyword"
+          },
+          "resim_path" : {
+            "type" : "keyword"
+          },
+          "segment_id" : {
+            "type" : "keyword"
+          },
+          "sensor_id" : {
+            "type" : "keyword"
+          },
+          "sensor_type" : {
+            "type" : "keyword"
+          },
+          "sensorversion_id" : {
+            "type" : "keyword"
+          },
+          "started_at" : {
+            "type" : "date"
+          },
+          "state" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          },
+          "version" : {
+            "type" : "keyword"
+          }
+        }
+      },
+      "asdmoutput" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "asdm_version" : {
+            "type" : "keyword"
+          },
+          "asdmoutput_id" : {
+            "type" : "keyword"
+          },
+          "cluster_id" : {
+            "type" : "keyword"
+          },
+          "created_at" : {
+            "type" : "date"
+          },
+          "dat_file" : {
+            "type" : "keyword"
+          },
+          "mat_file" : {
+            "type" : "keyword"
+          },
+          "nfs_host" : {
+            "type" : "keyword"
+          },
+          "path" : {
+            "type" : "keyword"
+          },
+          "segment_id" : {
+            "type" : "keyword"
+          },
+          "sensor_versions" : {
+            "type" : "nested",
+            "properties" : {
+              "sensor" : {
+                "type" : "keyword"
+              },
+              "version" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "smb_host" : {
+            "type" : "keyword"
+          },
+          "smb_share" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          }
+        }
+      },
+      "scenario" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "cpu_time" : {
+            "type" : "integer"
+          },
+          "created_at" : {
+            "type" : "date"
+          },
+          "ended_at" : {
+            "type" : "date"
+          },
+          "name" : {
+            "type" : "keyword"
+          },
+          "output_path" : {
+            "type" : "keyword"
+          },
+          "query" : {
+            "type" : "keyword"
+          },
+          "sensor_versions" : {
+            "type" : "nested",
+            "properties" : {
+              "sensor" : {
+                "type" : "keyword"
+              },
+              "version" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          "started_at" : {
+            "type" : "date"
+          },
+          "state" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          },
+          "user" : {
+            "type" : "keyword"
+          }
+        }
+      },
+      "segment" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "AltitudeMax" : {
+            "type" : "float"
+          },
+          "AltitudeMin" : {
+            "type" : "float"
+          },
+          "Country" : {
+            "type" : "keyword"
+          },
+          "Distance" : {
+            "type" : "float"
+          },
+          "LatitudeMax" : {
+            "type" : "float"
+          },
+          "LatitudeMin" : {
+            "type" : "float"
+          },
+          "LongitudeMax" : {
+            "type" : "float"
+          },
+          "LongitudeMin" : {
+            "type" : "float"
+          },
+          "SpeedLimit" : {
+            "type" : "integer"
+          },
+          "Temperature" : {
+            "type" : "float"
+          },
+          "TimeLogged" : {
+            "type" : "date"
+          },
+          "TimeOfDay" : {
+            "type" : "keyword"
+          },
+          "VelocityMax" : {
+            "type" : "float"
+          },
+          "VelocityMean" : {
+            "type" : "float"
+          },
+          "VelocityMin" : {
+            "type" : "float"
+          },
+          "Weather" : {
+            "type" : "keyword"
+          },
+          "car_id" : {
+            "type" : "keyword"
+          },
+          "cluster_id" : {
+            "type" : "keyword"
+          },
+          "created_at" : {
+            "type" : "date"
+          },
+          "drive_id" : {
+            "type" : "keyword"
+          },
+          "ended_at" : {
+            "type" : "date"
+          },
+          "index" : {
+            "type" : "keyword"
+          },
+          "is_first_segment" : {
+            "type" : "boolean"
+          },
+          "is_last_segment" : {
+            "type" : "boolean"
+          },
+          "nfs_host" : {
+            "type" : "keyword"
+          },
+          "output_export" : {
+            "type" : "keyword"
+          },
+          "output_path" : {
+            "type" : "keyword"
+          },
+          "output_share" : {
+            "type" : "keyword"
+          },
+          "perm_export" : {
+            "type" : "keyword"
+          },
+          "perm_path" : {
+            "type" : "keyword"
+          },
+          "perm_share" : {
+            "type" : "keyword"
+          },
+          "project_name" : {
+            "type" : "keyword"
+          },
+          "raw_vpcap_size" : {
+            "type" : "float"
+          },
+          "resim_export" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "resim_export_" : {
+            "type" : "keyword"
+          },
+          "resim_path" : {
+            "type" : "keyword"
+          },
+          "resim_share" : {
+            "type" : "keyword"
+          },
+          "segment_id" : {
+            "type" : "keyword"
+          },
+          "sequence" : {
+            "type" : "integer"
+          },
+          "smb_host" : {
+            "type" : "keyword"
+          },
+          "started_at" : {
+            "type" : "date"
+          },
+          "state" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          }
+        }
+      },
+      "_default_" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true
+      },
+      "sensor" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "car_id" : {
+            "type" : "keyword"
+          },
+          "cluster_id" : {
+            "type" : "keyword"
+          },
+          "created_at" : {
+            "type" : "date"
+          },
+          "drive_id" : {
+            "type" : "keyword"
+          },
+          "ended_at" : {
+            "type" : "date"
+          },
+          "output_path" : {
+            "type" : "keyword"
+          },
+          "perm_path" : {
+            "type" : "keyword"
+          },
+          "project_name" : {
+            "type" : "keyword"
+          },
+          "resim_path" : {
+            "type" : "keyword"
+          },
+          "segment_id" : {
+            "type" : "keyword"
+          },
+          "sensor_id" : {
+            "type" : "keyword"
+          },
+          "sensor_type" : {
+            "type" : "keyword"
+          },
+          "started_at" : {
+            "type" : "date"
+          },
+          "state" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          }
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "creation_date" : "1568606871139",
+        "number_of_shards" : "6",
+        "number_of_replicas" : "2",
+        "uuid" : "odu9FFJJToS4r65v5-ufOQ",
+        "version" : {
+          "created" : "5060499"
+        },
+        "provided_name" : "dms-z1-resim-v1-2019-09"
+      }
+    }
+  }
+}

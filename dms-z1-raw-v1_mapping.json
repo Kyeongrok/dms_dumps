@@ -1,0 +1,265 @@
+{
+  "dms-z1-raw-v1" : {
+    "mappings" : {
+      "drive" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true,
+        "properties" : {
+          "car_id" : {
+            "type" : "keyword"
+          },
+          "cluster_id" : {
+            "type" : "keyword"
+          },
+          "dmsclient_version" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "drive_id" : {
+            "type" : "keyword"
+          },
+          "file_count" : {
+            "type" : "integer"
+          },
+          "flc_state" : {
+            "type" : "keyword"
+          },
+          "ingest_duration" : {
+            "type" : "integer"
+          },
+          "ingest_station" : {
+            "type" : "keyword"
+          },
+          "ingest_version" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "logged_at" : {
+            "type" : "date"
+          },
+          "nfs_host" : {
+            "type" : "keyword"
+          },
+          "project_name" : {
+            "type" : "keyword"
+          },
+          "raw_export" : {
+            "type" : "keyword"
+          },
+          "size" : {
+            "type" : "long"
+          },
+          "smb_host" : {
+            "type" : "keyword"
+          },
+          "smb_share" : {
+            "type" : "keyword"
+          },
+          "source_path" : {
+            "type" : "keyword"
+          },
+          "state" : {
+            "type" : "keyword"
+          },
+          "tags" : {
+            "type" : "text",
+            "fields" : {
+              "keyword" : {
+                "type" : "keyword",
+                "ignore_above" : 256
+              }
+            }
+          },
+          "target_path" : {
+            "type" : "keyword"
+          },
+          "updated_at" : {
+            "type" : "date"
+          }
+        }
+      },
+      "_default_" : {
+        "dynamic_templates" : [
+          {
+            "suffix_long" : {
+              "match" : "*_long",
+              "mapping" : {
+                "type" : "long"
+              }
+            }
+          },
+          {
+            "suffix_int" : {
+              "match" : ".*(_int|_integer)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "integer"
+              }
+            }
+          },
+          {
+            "suffix_float" : {
+              "match" : "*_float",
+              "mapping" : {
+                "type" : "float"
+              }
+            }
+          },
+          {
+            "suffix_date" : {
+              "match" : "*_date",
+              "mapping" : {
+                "type" : "date"
+              }
+            }
+          },
+          {
+            "suffix_bool" : {
+              "match" : ".*(_bool|_boolean)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "boolean"
+              }
+            }
+          },
+          {
+            "suffix_kw" : {
+              "match" : ".*(_kw|_keyword)$",
+              "match_pattern" : "regex",
+              "mapping" : {
+                "type" : "keyword"
+              }
+            }
+          },
+          {
+            "suffix_text" : {
+              "match" : "*_text",
+              "mapping" : {
+                "type" : "text"
+              }
+            }
+          },
+          {
+            "suffix_byte" : {
+              "match" : "*_byte",
+              "mapping" : {
+                "type" : "byte"
+              }
+            }
+          },
+          {
+            "suffix_double" : {
+              "match" : "*_double",
+              "mapping" : {
+                "type" : "double"
+              }
+            }
+          },
+          {
+            "suffix_short" : {
+              "match" : "*_short",
+              "mapping" : {
+                "type" : "short"
+              }
+            }
+          }
+        ],
+        "numeric_detection" : true
+      }
+    }
+  }
+}
